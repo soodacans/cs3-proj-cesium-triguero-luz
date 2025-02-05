@@ -128,6 +128,7 @@ function displayFinalIcecream(cont, flavor, topping) {
   
 }
 
+// CAKE
 // When the page is loaded, it retrieves the stored values from localStorage and calls the appropriate function
 window.onload = function() {
   // Retrieve user choices from localStorage
