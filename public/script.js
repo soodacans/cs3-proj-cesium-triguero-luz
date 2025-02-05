@@ -102,3 +102,24 @@ function selectICTopping(topping) {
   }
 }
 
+// Determines the function to run to display the final image based on the dessert choice
+function whichDessert(dessert, cont, flavor, topping) {
+  if (dessert === 'cake') {
+    displayFinalCake();
+  } else if (dessert === 'icecream') {
+    displayFinalIcecream(cont, flavor, topping);
+  }
+}
+
+// Will use user input from the choices to determine the final ICECREAM img to be displayed 
+function displayFinalIcecream(cont, flavor, topping) {
+  // Check all conditions using AND (&&) operator
+  if (cont === 'cup' && flavor === 'strawberry' && topping === 'cherry') {
+    document.getElementById("final-image").src = "https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/cup-strawberry-cherry.png?v=1738757020723";
+  }
+  // You can add more conditions for other combinations
+  //else if (cont === 'cone' && flavor === 'chocolate' && topping === 'sprinkles') {
+    //document.getElementById("final-image").src = "https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/cone-chocolate-sprinkles.png?v=1738757020723";
+  
+  // Add more conditions here as needed
+}
