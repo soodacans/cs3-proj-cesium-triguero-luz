@@ -70,6 +70,7 @@ function selectTopping(topping) {
 
 //If the user chooses icecream, they will choose a container, then they will be directed to the next webpage to pick a flavor
 function selectCont(cont) {
+  localStorage.setItem('container', cont)
   if (cont === 'cup') {
     window.location.href = 'icecreamflavor.html';
   } else if (cont === 'cone') {
@@ -79,6 +80,7 @@ function selectCont(cont) {
 
 //After the user chooses a flavor, they will be directed to the next webpage to pick a topping
 function selectICFlavor(flavor) {
+  localStorage.setItem('flavor', flavor)
   if (flavor === 'strawberry') {
     window.location.href = 'icecreamtopping.html';
   } else if (flavor === 'vanilla') {
@@ -90,6 +92,7 @@ function selectICFlavor(flavor) {
 
 //After the user picks a topping, they will be directed to the finish page where their final decorated sweet treat will be displayed
 function selectICTopping(topping) {
+  localStorage.setItem('topping', topping)
   if (topping === 'cherry') {
     window.location.href = 'finish.html';
   } else if (topping === 'sprinkles') {
@@ -98,3 +101,4 @@ function selectICTopping(topping) {
     window.location.href = 'finish.html';
   }
 }
+
