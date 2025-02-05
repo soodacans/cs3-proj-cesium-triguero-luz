@@ -147,15 +147,46 @@ window.onload = function() {
 function displayFinalCake(cont, flavor, topping) {
   if (shape === 'circle' && flavor === 'strawberry' && topping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-STRAWBERRY-STRAWBERRY.png?v=1738758397627";
-  } else if (shape === 'circle' && flavor === 'strawberry' && topping === 'sprinkle') {
+  } else if (shape === 'circle' && flavor === 'strawberry' && topping === 'sprinkles') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-STRAWBERRY-SPRINKLES.png?v=1738758395593";
   } else if (shape === 'circle' && flavor === 'strawberry' && topping === 'cherry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-STRAWBERRY-CHERRY.png?v=1738758392696";
   } else if (shape === 'square' && flavor === 'strawberry' && topping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-STRAWBERRY-STRAWBERRY%20(1).png?v=1738758526659";
-  } else if (shape === 'square' && flavor === 'strawberry' && topping === 'strawberry') {
-    document.getElementById("final-image").src
+  } else if (shape === 'square' && flavor === 'strawberry' && topping === 'sprinkles') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-STRAWBERRY-SPRINKLES%20(1).png?v=1738758479788";
+  } else if (shape === 'square' && flavor === 'strawberry' && topping === 'cherry') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-STRAWBERRY-CHERRY.png?v=1738758473975";
+  } else if (shape === 'heart' && flavor === 'strawberry' && topping === 'strawberry') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-STRAWBERRY-STRAWBERRY.png?v=1738758435221";
+  } else if (shape === 'heart' && flavor === 'strawberry' && topping === 'sprinkles') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-STRAWBERRY-SPRINKLES.png?v=1738758429807";
+  } else if (shape === 'heart' && flavor === 'strawberry' && topping === 'cherry') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-STRAWBERRY-CHERRY.png?v=1738758427969";
     
   // chocolate
-    
+  } else if (shape === 'circle' && flavor === 'chocolate' && topping === 'strawberry') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-CHOCOLATE-STRAWBERRY.png?v=1738758388422";
+  } else if (shape === 'circle' && flavor === 'chocolate' && topping === 'sprinkles') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-CHOCOLATE-SPRINKLES.png?v=1738758384838";
+  } else if (shape === 'circle' && flavor === 'chocolate' && topping === 'cherry') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-CHOCOLATE-CHERRY.png?v=1738758383397";
+  } else if (shape === 'square' && flavor === 'chocolate' && topping === 'strawberry') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-CHOCOLATE-STRAWBERRY.png?v=1738758469258";
+  } else if (shape === 'square' && flavor === 'chocolate' && topping === 'sprinkles') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-CHOCOLATE-SPRINKLES.png?v=1738758463481";
+  } else if (shape === 'square' && flavor === 'chocolate' && topping === 'cherry') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-CHOCOLATE-CHERRY.png?v=1738758458422";
+  } else if (shape === 'heart' && flavor === 'chocolate' && topping === 'strawberry') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-CHOCOLATE-STRAWBERRY.png?v=1738758423995";
+  } else if (shape === 'heart' && flavor === 'chocolate' && topping === 'sprinkles') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-CHOCOLATE-SPRINKLES.png?v=1738758421988";
+   } else if (shape === 'heart' && flavor === 'chocolate' && topping === 'cherry') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-CHOCOLATE-CHERRY.png?v=1738758417535";
+     
   // vanilla
+  } else if (shape === 'circle' && flavor === 'vanilla' && topping === 'strawberry') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-VANILLA-STRAWBERRY.png?v=1738758409415";
+  } else if (shape === 'circle' && flavor === 'vanilla' && topping === 'sprinkles') {
+    document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-VANILLA-SPRINKLES.png?v=1738758407331";
+    
