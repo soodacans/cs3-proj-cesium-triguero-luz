@@ -73,7 +73,7 @@ window.onload = function() {
   let flavor = localStorage.getItem("flavor");
   let topping = localStorage.getItem("topping");
 
-  // Check if the choices are available
+  // Check if the choices are available HI 
   if (cont && flavor && topping) {
     displayFinalIcecream(cont, flavor, topping);
   } else {

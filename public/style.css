@@ -94,3 +94,8 @@ figcaption {
     color: #67595E;
     font-style: bold;
 }
+
+#final-image {
+  width: 400px
+  height: 400px
+}
