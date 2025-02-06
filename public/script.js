@@ -38,14 +38,14 @@ function selectShape(shape) {
 }
 
 // After the user chooses a flavor, they will be directed to the next webpage to pick a topping
-function selectFlavor(flavor) {
-  localStorage.setItem('flavor', flavor)
+function selectFlavor(cakeflavor) {
+  localStorage.setItem('flavor', cakeflavor)
   window.location.href = 'caketoppings.html';
 }
 
 // After the user picks a topping, they will be directed to the finish page where their final decorated sweet treat will be displayed
-function selectTopping(topping) {
-  localStorage.setItem('topping', topping)
+function selectTopping(caketopping) {
+  localStorage.setItem('topping', caketopping)
   window.location.href = 'finish.html';
 }
 
@@ -69,20 +69,23 @@ function selectICTopping(topping) {
   window.location.href = 'finish.html';
 }
 
-// When the page is loaded, it retrieves the stored values from localStorage and calls the appropriate function
-window.onload = function() {
-  // Retrieve user choices from localStorage
+window.onload = function () {
   let cont = localStorage.getItem("container");
+  let shape = localStorage.getItem("shape");
+  let cakeflavor = localStorage.getItem("cakeflavor");
   let flavor = localStorage.getItem("flavor");
+  let caketopping = localStorage.getItem("topping");
   let topping = localStorage.getItem("topping");
-
-  // Check if the choices are available HI 
+  
   if (cont && flavor && topping) {
     displayFinalIcecream(cont, flavor, topping);
+  } else if (shape && cakeflavor && caketopping) {
+    displayFinalCake(shape, cakeflavor, caketopping);
   } else {
-    document.getElementById("final-image").src = "https://via.placeholder.com/300x300.png";  // Default image
+    document.getElementById("final-image").src = "https://via.placeholder.com/300x300.png";
   }
 };
+
 
 // Will use user input from the choices to determine the final ICECREAM img to be displayed 
 function displayFinalIcecream(cont, flavor, topping) {
@@ -128,81 +131,68 @@ function displayFinalIcecream(cont, flavor, topping) {
   
 }
 
-// CAKE
-// When the page is loaded, it retrieves the stored values from localStorage and calls the appropriate function
-window.onload = function() {
-  // Retrieve user choices from localStorage
-  let shape = localStorage.getItem("shape");
-  let flavor = localStorage.getItem("flavor");
-  let topping = localStorage.getItem("topping");
 
-  // Check if the choices are available
-  if (shape && flavor && topping) {
-    displayFinalCake(shape, flavor, topping);
-  } else {
-    document.getElementById("final-image").src = "https://via.placeholder.com/300x300.png";  // Default image
-  }
-};
+
 
 // Will use user input from the choices to determine the final CAKE img to be displayed 
-function displayFinalCake(shape, flavor, topping) {
-  if (shape === 'circle' && flavor === 'strawberry' && topping === 'strawberry') {
+function displayFinalCake(shape, cakeflavor, caketopping) {
+  if (shape === 'circle' && cakeflavor === 'strawberry' && caketopping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-STRAWBERRY-STRAWBERRY.png?v=1738758397627";
-  } else if (shape === 'circle' && flavor === 'strawberry' && topping === 'sprinkles') {
+  } else if (shape === 'circle' && cakeflavor === 'strawberry' && caketopping === 'sprinkles') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-STRAWBERRY-SPRINKLES.png?v=1738758395593";
-  } else if (shape === 'circle' && flavor === 'strawberry' && topping === 'cherry') {
+  } else if (shape === 'circle' && cakeflavor === 'strawberry' && caketopping === 'cherry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-STRAWBERRY-CHERRY.png?v=1738758392696";
-  } else if (shape === 'square' && flavor === 'strawberry' && topping === 'strawberry') {
+  } else if (shape === 'square' && cakeflavor === 'strawberry' && caketopping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-STRAWBERRY-STRAWBERRY%20(1).png?v=1738758526659";
-  } else if (shape === 'square' && flavor === 'strawberry' && topping === 'sprinkles') {
+  } else if (shape === 'square' && cakeflavor === 'strawberry' && caketopping === 'sprinkles') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-STRAWBERRY-SPRINKLES%20(1).png?v=1738758479788";
-  } else if (shape === 'square' && flavor === 'strawberry' && topping === 'cherry') {
+  } else if (shape === 'square' && cakeflavor === 'strawberry' && caketopping === 'cherry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-STRAWBERRY-CHERRY.png?v=1738758473975";
-  } else if (shape === 'heart' && flavor === 'strawberry' && topping === 'strawberry') {
+  } else if (shape === 'heart' && cakeflavor === 'strawberry' && caketopping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-STRAWBERRY-STRAWBERRY.png?v=1738758435221";
-  } else if (shape === 'heart' && flavor === 'strawberry' && topping === 'sprinkles') {
+  } else if (shape === 'heart' && cakeflavor === 'strawberry' && caketopping === 'sprinkles') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-STRAWBERRY-SPRINKLES.png?v=1738758429807";
-  } else if (shape === 'heart' && flavor === 'strawberry' && topping === 'cherry') {
+  } else if (shape === 'heart' && cakeflavor === 'strawberry' && caketopping === 'cherry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-STRAWBERRY-CHERRY.png?v=1738758427969";
     
   // chocolate
-  } else if (shape === 'circle' && flavor === 'chocolate' && topping === 'strawberry') {
+  } else if (shape === 'circle' && cakeflavor === 'chocolate' && caketopping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-CHOCOLATE-STRAWBERRY.png?v=1738758388422";
-  } else if (shape === 'circle' && flavor === 'chocolate' && topping === 'sprinkles') {
+  } else if (shape === 'circle' && cakeflavor === 'chocolate' && caketopping === 'sprinkles') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-CHOCOLATE-SPRINKLES.png?v=1738758384838";
-  } else if (shape === 'circle' && flavor === 'chocolate' && topping === 'cherry') {
+  } else if (shape === 'circle' && cakeflavor === 'chocolate' && caketopping === 'cherry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-CHOCOLATE-CHERRY.png?v=1738758383397";
-  } else if (shape === 'square' && flavor === 'chocolate' && topping === 'strawberry') {
+  } else if (shape === 'square' && cakeflavor === 'chocolate' && caketopping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-CHOCOLATE-STRAWBERRY.png?v=1738758469258";
-  } else if (shape === 'square' && flavor === 'chocolate' && topping === 'sprinkles') {
+  } else if (shape === 'square' && cakeflavor === 'chocolate' && caketopping === 'sprinkles') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-CHOCOLATE-SPRINKLES.png?v=1738758463481";
-  } else if (shape === 'square' && flavor === 'chocolate' && topping === 'cherry') {
+  } else if (shape === 'square' && cakeflavor === 'chocolate' && caketopping === 'cherry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-CHOCOLATE-CHERRY.png?v=1738758458422";
-  } else if (shape === 'heart' && flavor === 'chocolate' && topping === 'strawberry') {
+  } else if (shape === 'heart' && cakeflavor === 'chocolate' && caketopping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-CHOCOLATE-STRAWBERRY.png?v=1738758423995";
-  } else if (shape === 'heart' && flavor === 'chocolate' && topping === 'sprinkles') {
+  } else if (shape === 'heart' && cakeflavor === 'chocolate' && caketopping === 'sprinkles') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-CHOCOLATE-SPRINKLES.png?v=1738758421988";
-  } else if (shape === 'heart' && flavor === 'chocolate' && topping === 'cherry') {
+  } else if (shape === 'heart' && cakeflavor === 'chocolate' && caketopping === 'cherry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-CHOCOLATE-CHERRY.png?v=1738758417535";
      
   // vanilla
-  } else if (shape === 'circle' && flavor === 'vanilla' && topping === 'strawberry') {
+  } else if (shape === 'circle' && cakeflavor === 'vanilla' && caketopping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-VANILLA-STRAWBERRY.png?v=1738758409415";
-  } else if (shape === 'circle' && flavor === 'vanilla' && topping === 'sprinkles') {
+  } else if (shape === 'circle' && cakeflavor === 'vanilla' && caketopping === 'sprinkles') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-VANILLA-SPRINKLES.png?v=1738758407331";
-  } else if (shape === 'circle' && flavor === 'vanilla' && topping === 'cherry') {
+  } else if (shape === 'circle' && cakeflavor === 'vanilla' && caketopping === 'cherry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/CIRCLE-VANILLA-CHERRY.png?v=1738758401907";
-  } else if (shape === 'square' && flavor === 'vanilla' && topping === 'strawberry') {
+  } else if (shape === 'square' && cakeflavor === 'vanilla' && caketopping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-VANILLA-STRAWBERRY.png?v=1738758567638";
-  } else if (shape === 'square' && flavor === 'vanilla' && topping === 'sprinkles') {
+  } else if (shape === 'square' && cakeflavor === 'vanilla' && caketopping === 'sprinkles') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-VANILLA-SPRINKLES.png?v=1738758562713";
-  } else if (shape === 'square' && flavor === 'vanilla' && topping === 'cherry') {
+  } else if (shape === 'square' && cakeflavor === 'vanilla' && caketopping === 'cherry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/SQUARE-VANILLA-CHERRY.png?v=1738758556230";
-  } else if (shape === 'heart' && flavor === 'vanilla' && topping === 'strawberry') {
+  } else if (shape === 'heart' && cakeflavor === 'vanilla' && caketopping === 'strawberry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-VANILLA-STRAWBERRY.png?v=1738758450337";
-  } else if (shape === 'heart' && flavor === 'vanilla' && topping === 'sprinkles') {
+  } else if (shape === 'heart' && cakeflavor === 'vanilla' && caketopping === 'sprinkles') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-VANILLA-SPRINKLES.png?v=1738758443061";
-  } else if (shape === 'heart' && flavor === 'vanilla' && topping === 'cherry') {
+  } else if (shape === 'heart' && cakeflavor === 'vanilla' && caketopping === 'cherry') {
     document.getElementById("final-image").src="https://cdn.glitch.global/5c7f8dc4-a8ab-446f-94bb-7ca841fad583/HEART-VANILLA-CHERRY.png?v=1738758440602";
   }
 
